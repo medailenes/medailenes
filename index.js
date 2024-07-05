@@ -1,35 +1,53 @@
-const btnLike1 = document.getElementById("btnLike1")
-const countLikes1 = document.getElementById("countLikes1")
-const btnLike2 = document.getElementById("btnLike2")
-const countLikes2 = document.getElementById("countLikes2")
-function clickLike1(){
-    let totalLikes1 = parseInt(countLikes1.value) + 1
-    countLikes1.textContent = totalLikes1.toString()
-  }
-function clickLike2(){
-    let totalLikes2 = parseInt(countLikes2.value) + 1
-    countLikes2.textContent = totalLikes2.toString()
-}
-btnLike1.addEventListener("click",clickLike1)
-btnLike2.addEventListener("click",clickLike2)
+var product1 = document.getElementById("product1");
+var qty1 = document.getElementById("qty1");
+var price1 = document.getElementById("price1");
+var product2 = document.getElementById("product2");
+var qty2 = document.getElementById("qty2");
+var price2 = document.getElementById("price2");
+var carts = document.getElementById("carts");
+var totalInput = document.getElementById("total");
+var cashInput = document.getElementById("cash");
+var changeInput = document.getElementById("change");
 
-function DisLikes1() {
-  let totalDisLikes1 = parseInt(countDisLikes1.value) + 1
-   countDisLikes1.textContent = totalDisLikes1.toString()
-}
-btnDisLike1.addEventListener("click",DisLikes1)
+function addOrder() {
+    carts.textContent = "";
 
-function DisLikes2() {
-  let totalDisLikes2 = parseInt(countDisLikes2.value) + 1
-   countDisLikes2.textContent = totalDisLikes2.toString()
-}
-btnDisLike2.addEventListener("click",DisLikes2)
+    if (parseFloat(qty1.value) > 0) {
+        var order1 = qty1.value.toString() + " pcs x " + product1.textContent + " - Php " + (parseFloat(qty1.value) * parseFloat(price1.textContent)).toFixed(2) + "\n";
+        carts.textContent += order1;
+    }
 
-const comment = document.getElementById("comment")
-const submit = document.getElementById("submit")
-const commentbox = document.getElementById("commentbox")
-function submitComment() {
-   commentbox.textContent += comment.value.toString() + "\n"
-    comment.value=""
+    if (parseFloat(qty2.value) > 0) {
+        var order2 = qty2.value.toString() + " pcs x " + product2.textContent + " - Php " + (parseFloat(qty2.value) * parseFloat(price2.textContent)).toFixed(2) + "\n";
+        carts.textContent += order2;
+    }
+
+    updateTotal(); // Update total after adding orders
 }
-submit.addEventListener("click",submitComment)
+
+function updateTotal() {
+    var total = 0;
+
+    total += parseFloat(qty1.value) * parseFloat(price1.textContent);
+
+    total += parseFloat(qty2.value) * parseFloat(price2.textContent);
+
+    totalInput.value = total.toFixed(2); // Update total input field
+    calculateChange(); // Calculate change after updating total
+}
+
+function calculateChange() {
+    var total = parseFloat(totalInput.value);
+    var cash = parseFloat(cashInput.value);
+
+    if (!isNaN(total) && !isNaN(cash)) {
+        var change = cash - total;
+        changeInput.value = change.toFixed(2); // Update change input field
+    } else {
+        changeInput.value = "";
+    }
+}
+
+qty1.addEventListener("keyup", addOrder);
+qty2.addEventListener("keyup", addOrder);
+cashInput.addEventListener("input", calculateChange);
