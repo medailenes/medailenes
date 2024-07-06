@@ -1,70 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hindi Eto ChatGPT Promise</title>
+<html lang="en" data-bs-theme="dark">
+   <title>STORE</title>
+   <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   </head>
+   <body style="background-image: url('e6f94159cf5976f62259fdba5327f109.jpg');> 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2>Store</h2>
-                <p>By: BSIT-</p>
-                <hr class="hr" />
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>MK STORE</h2>
+                <hr class="hr" />
+                </div>
+            </div>
+        </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <label id="product1">Maria Clara</label>
+                    <img src="Maria Clara1.jpeg" style="width: 300px;height: 300px;" class="img-thumbnail"/><br>
+                    <label for="product1" id="price1">350.00</label>
+                    <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+                </div>
+                <div class="col-4 text-center">
+                        <label id="product2">four seasons</label>
+                        <img src="four seasons2.jpeg" style="width:300px;height: 300px;" class="img-thumbnail"/><br>
+                        <label for="product2" id="price2">800.00</label>
+                        <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
+                </div>
+              <div class="col-4 text-center">
+                    <label id="product1">novellino</label>
+                    <img src="novellino3.jpeg" style="width: 300px;height: 300px;" class="img-thumbnail"/><br>
+                    <label for="product1" id="price1">300.00</label>
+                    <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+                </div>
+              <div class="col-4 text-center">
+                    <label id="product1">wente</label>
+                    <img src="wente4.jpeg" style="width: 300px;height: 300px;" class="img-thumbnail"/><br>
+                    <label for="product1" id="price1">380.00</label>
+                    <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+                </div>
+              <div class="col-4 text-center">
+                    <label id="product1">frontiera</label>
+                    <img src="frontiera5.jpeg" style="width: 300px;height: 300px;" class="img-thumbnail"/><br>
+                    <label for="product1" id="price1">460.00</label>
+                    <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+                </div>
+              <div class="col-4 text-center">
+                    <label id="product1">Mountainview wines</label>
+                    <img src="Mountainview wines6.jpeg" style="width: 300px;height: 300px;" class="img-thumbnail"/><br>
+                    <label for="product1" id="price1">500.00</label>
+                    <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+                </div>
+                <div class="col-4">
+                        <label for="carts"> Orders </label><br>
+                        <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width: 350px;height: 400px;font-size: 12px;"></textarea>
+                        <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
+                        <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
+                        <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+                        
+                </div>
+            </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4 text-center">
-                <label id="product1">Maria Clara</label>
-                <img src="Maria Clara1.jpeg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product1" id="price1">350.00</label>
-                <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product2">four seasons</label>
-                <img src="four seasons2.jpeg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product2" id="price2">800.00</label>
-                <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product3">novellino</label>
-                <img src="novellino3.jpeg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product3" id="price3">500.00</label>
-                <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 text-center">
-                <label id="product4">wente</label>
-                <img src="Raspberry and white chocolate.webp" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product4" id="price4">380.00</label>
-                <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product5">frontiera</label>
-                <img src="" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product5" id="price5">460.00</label>
-                <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4 text-center">
-                <label id="product6">Mountainview wines</label>
-                <img src="" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                <label for="product6" id="price6">500.00</label>
-                <input type="number" class="form-control" id="qty6" placeholder="Enter quantity"/><br>
-            </div>
-            <div class="col-4">
-                <label for="carts">Orders</label><br>
-                <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px;height: 400px;font-size: 12px;"></textarea>
-                <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
-                <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
-                <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
-            </div>
-        </div>
-    </div>
-    <script src="index.js"></script>
-</body>
-                                                              </html>
+     <br><br>
+       <div class="card text-center">
+      <div class="card-footer text-body-secondary">
+      Owned By Medailene Kieth BSIT-3D</div>
+    </div>
+     <script>
+        var products = [
+        { id: 1, name: "MARIA CLARA", price: 350.00 },
+        { id: 2, name: "FOUR SEASONS", price: 800.00 },
+        { id: 3, name: "NOVELLINO", price: 300.00 },
+        { id: 4, name: "WENTE", price: 380.00 },
+        { id: 5, name: "FRONTIERA", price: 460.00 },
+        { id: 6, name: "MOUNTAINVIEW WINES", price: 500.00 },
+        
+    ];
+    
+    
+    var qtyInputs = document.querySelectorAll('[id^="qty"]');
+    var carts = document.getElementById("carts");
+    var totalInput = document.getElementById("total");
+    var cashInput = document.getElementById("cash");
+    var changeInput = document.getElementById("change");
+    
+    
+    qtyInputs.forEach(function(qtyInput) {
+        qtyInput.addEventListener("input", addOrder);
+    });
+    
+    cashInput.addEventListener("input", calculateChange);
+    
+    
+    function addOrder() {
+        carts.textContent = ""; // Clear previous cart content
+    
+        var total = 0;
+    
+        qtyInputs.forEach(function(qtyInput, index) {
+            var qty = parseFloat(qtyInput.value);
+            if (qty > 0) {
+                var product = products[index];
+                var order = qty + " pcs x " + product.name + " - Php " + (qty * product.price).toFixed(2) + "\n";
+                carts.textContent += order;
+                total += qty * product.price;
+            }
+        });
+    
+        totalInput.value = total.toFixed(2); // Update total
+        calculateChange(); // Recalculate change
+    }
+    
+    
+    function calculateChange() {
+        var total = parseFloat(totalInput.value);
+        var cash = parseFloat(cashInput.value);
+    
+        if (!isNaN(total) && !isNaN(cash)) {
+            var change = cash - total;
+            changeInput.value = change.toFixed(2);
+        } else {
+            changeInput.value = "";
+        }
+    }
+    </script>
+  <body>
+                        </html>
